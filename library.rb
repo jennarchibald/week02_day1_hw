@@ -3,19 +3,23 @@
 class Library
   attr_reader :shelf
 
-  def initialize(book_title, student_name, date)
-    @shelf = [
-    {
-      title: book_title,
-      rental_details: {
-        student_name: student_name,
-        date: date
-      }
-      }
-    ]
+  #Original initialize method below - can only initialize with at least but not more than 1 book in library :(
+  # def initialize(book_title, student_name, date)
+  #   @shelf = [
+  #   {
+  #     title: book_title,
+  #     rental_details: {
+  #       student_name: student_name,
+  #       date: date
+  #     }
+  #     }
+  #   ]
+  #
+  # end
 
+  def initialize(books)
+    @shelf = books
   end
-
 
 
   def get_books
