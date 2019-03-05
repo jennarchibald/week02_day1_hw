@@ -17,10 +17,16 @@ class Library
   #
   # end
 
-  def initialize(books)
+
+  #Option 2 - takes a pre-made library of books as an array
+  # def initialize(books)
+  #   @shelf = books
+  # end
+
+
+  def initialize(*books)
     @shelf = books
   end
-
 
   def get_books
     return @shelf
