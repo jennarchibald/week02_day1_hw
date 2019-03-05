@@ -8,23 +8,25 @@ class TestLibrary < MiniTest::Test
   def setup
     @book1 =
       {
-   title: "lord_of_the_rings",
-   rental_details: {
-    student_name: "Jeff",
-    date: "01/12/16"
-   }
- }
+       title: "lord_of_the_rings",
+       rental_details: {
+        student_name: "Jeff",
+        date: "01/12/16"
+       }
+     }
 
-  @book2 =
-  {
-title: "game_of_thrones",
-rental_details: {
-student_name: "Jon",
-date: "01/12/16"
-}
-}
+    @book2 =
+      {
+        title: "game_of_thrones",
+        rental_details: {
+        student_name: "Jon",
+        date: "01/12/16"
+        }
+      }
 
   end
+
+
   def test_get_books
     library1 = Library.new(@book1, @book2)
     result = library1.get_books
